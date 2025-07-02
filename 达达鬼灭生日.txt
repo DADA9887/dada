@@ -1,3 +1,14 @@
+var data = "2025/05/05";
+
+
+
+
+
+
+
+
+
+
 // ==UserScript==
 // @name         达达鬼灭生日
 // @version      0.1
@@ -19,4 +30,4 @@ function modifyDateByLabel(labelText, newDate) {
 
 
 // 修改 下面的日期 格式 "2025/05/05" 
-modifyDateByLabel('生年月日', '2025/05/15');
+modifyDateByLabel('生年月日', data);
