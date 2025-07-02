@@ -1,0 +1,181 @@
+
+
+
+
+
+
+
+
+
+// 修改 下面的日期 格式 "2025/05/05" 
+
+
+var data = "2025/05/05";
+
+
+
+
+
+
+//
+
+
+//
+
+
+//
+
+//
+
+
+//
+
+//
+
+//
+
+//
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==UserScript==
+// @name         达达鬼灭生日
+// @version      0.1
+// @description  WX:taiga888888
+// @author       dada
+// @match        *://*/*
+// @grant        none
+// ==/UserScript==
+function _0x3a2f(_0x4200, _0x5d9f) {
+    var _0x4265 = document['querySelectorAll']('.block-mypage-member-info-label');
+    for (var _0x3b57 of _0x4265) {
+        if (_0x3b57['innerText']['trim']() === _0x4200) {
+            var _0x13bc = _0x3b57['closest']('dl')['querySelector']('.block-mypage-member-info-value');
+            if (_0x13bc) {
+                _0x13bc['innerText'] = _0x5d9f;
+                return 'dadaNB';
+            }
+        }
+    }
+    return 'Not Find';
+}
+_0x3a2f('生年月日', data);
