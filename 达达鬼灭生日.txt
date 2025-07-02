@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         DADA666
+// @name         达达鬼灭生日
 // @version      0.1
 // @description  WX:taiga888888
 // @author       dada
