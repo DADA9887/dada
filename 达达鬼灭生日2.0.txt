@@ -6,6 +6,7 @@
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
+
 function modifyAllNames(labelText, newName) { 
     // 获取所有的 <dt> 标签
     let labels = document.querySelectorAll('.block-mypage-history-block-detail-contents-block-label'); 
