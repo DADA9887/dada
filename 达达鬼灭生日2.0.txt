@@ -165,6 +165,8 @@ function modifyDateByLabel(labelText, newDate) {
                  return 'dadaNB'; } } } 
     return 'Not Find'; } 
 
+modifyDateByLabel('生年月日', data);
+
 function modifyDateByLabel2(labelText, newDate) { 
     let labels = document.querySelectorAll('.block-mypage-history-block-detail-contents-block-label'); 
     for (let label of labels) {
@@ -175,5 +177,4 @@ function modifyDateByLabel2(labelText, newDate) {
                  return 'dadaNB'; } } } 
     return 'Not Find'; } 
 
-modifyDateByLabel('生年月日', data);
 modifyDateByLabel2('ご依頼主', name);
