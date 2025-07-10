@@ -155,26 +155,33 @@ var name = "达达 鸭";
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
-function modifyDateByLabel(labelText, newDate) { 
-    let labels = document.querySelectorAll('.block-mypage-member-info-label'); 
-    for (let label of labels) {
-         if (label.innerText.trim() === labelText) {
-             let ddElement = label.closest('dl').querySelector('.block-mypage-member-info-value'); 
-            if (ddElement) {
-                 ddElement.innerText = newDate;
-                 return 'dadaNB'; } } } 
-    return 'Not Find'; } 
-
-modifyDateByLabel('生年月日', data);
-
-function modifyDateByLabel2(labelText, newDate) { 
+function modifyName(labelText, newName) { 
+    // 获取所有的 <dt> 标签
     let labels = document.querySelectorAll('.block-mypage-history-block-detail-contents-block-label'); 
+    
+    // 遍历所有的 <dt> 标签
     for (let label of labels) {
-         if (label.innerText.trim() === labelText) {
-             let ddElement = label.closest('dl').querySelector('.block-mypage-history-block-detail-contents-block-content'); 
-            if (ddElement) {
-                 ddElement.innerText = newDate;
-                 return 'dadaNB'; } } } 
-    return 'Not Find'; } 
+        // 检查当前 <dt> 标签的文本是否与传入的 labelText 匹配
+        if (label.innerText.trim() === labelText) {
+            // 找到当前 <dt> 标签对应的父级 <dl>
+            let dl = label.closest('dl');
+            if (dl) {
+                // 在 <dl> 内找到对应的 <dd> 元素
+                let ddElement = dl.querySelector('.block-mypage-history-block-detail-contents-block-content');
+                if (ddElement) {
+                    // 修改 <dd> 元素的文本内容
+                    ddElement.innerText = newName;
+                    return 'Name modified';  // 修改成功返回
+                } else {
+                    return 'DD element not found';  // 未找到 <dd> 元素
+                }
+            } else {
+                return 'DL parent not found';  // 未找到 <dl> 元素
+            }
+        }
+    }
+    return 'Label not found';  // 未找到匹配的 <dt> 标签
+}
 
-modifyDateByLabel2('ご依頼主', name);
+// 调用函数修改内容
+modifyName('ご依頼主', '王 小明');
