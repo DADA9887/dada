@@ -1,3 +1,11 @@
+// ==UserScript==
+// @name         达达鬼灭生日2.0
+// @version      0.1
+// @description  WX:taiga888888
+// @author       dada
+// @match        *://*/*
+// @grant        none
+// ==/UserScript==
 function modifyAllNames(labelText, newName) { 
     // 获取所有的 <dt> 标签
     let labels = document.querySelectorAll('.block-mypage-history-block-detail-contents-block-label'); 
