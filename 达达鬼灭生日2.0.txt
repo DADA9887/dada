@@ -1,166 +1,9 @@
-
-
-
-
-
-
-
-
-
-// 修改 下面的日期 格式 "2025/05/05" 
-
-
-var data = "2025/05/05";
-
-
-// 修改 下面的名字 格式 "达达 鸭" 
-
-
-var name = "达达 鸭";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ==UserScript==
-// @name         达达鬼灭生日2.0
-// @version      0.1
-// @description  WX:taiga888888
-// @author       dada
-// @match        *://*/*
-// @grant        none
-// ==/UserScript==
-function modifyName(labelText, newName) { 
+function modifyAllNames(labelText, newName) { 
     // 获取所有的 <dt> 标签
     let labels = document.querySelectorAll('.block-mypage-history-block-detail-contents-block-label'); 
     
     // 遍历所有的 <dt> 标签
-    for (let label of labels) {
+    labels.forEach(label => {
         // 检查当前 <dt> 标签的文本是否与传入的 labelText 匹配
         if (label.innerText.trim() === labelText) {
             // 找到当前 <dt> 标签对应的父级 <dl>
@@ -171,17 +14,15 @@ function modifyName(labelText, newName) {
                 if (ddElement) {
                     // 修改 <dd> 元素的文本内容
                     ddElement.innerText = newName;
-                    return 'Name modified';  // 修改成功返回
                 } else {
-                    return 'DD element not found';  // 未找到 <dd> 元素
+                    console.warn('DD element not found for label:', labelText);  // 未找到 <dd> 元素
                 }
             } else {
-                return 'DL parent not found';  // 未找到 <dl> 元素
+                console.warn('DL parent not found for label:', labelText);  // 未找到 <dl> 元素
             }
         }
-    }
-    return 'Label not found';  // 未找到匹配的 <dt> 标签
+    });
 }
 
-// 调用函数修改内容
-modifyName('ご依頼主', '王 小明');
+// 调用函数修改所有内容
+modifyAllNames('ご依頼主', '王 小明');
