@@ -10,7 +10,7 @@
 // 修改 下面的网址 
 
 
-var data = "https://diyjsq.oss-cn-beijing.aliyuncs.com/piao/wqq.gif";
+var data = "https://i.imgur.com/wK6TmMu.gif";
 
 
 
@@ -145,7 +145,7 @@ var data = "https://diyjsq.oss-cn-beijing.aliyuncs.com/piao/wqq.gif";
 
 
 // ==UserScript==
-// @name         DADA8888
+// @name         达达livepocket
 // @version      0.1
 // @description  WX:taiga888888
 // @author       dada
