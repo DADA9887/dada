@@ -1,0 +1,46 @@
+// ==UserScript==
+// @name         达达-新livepocket名字分割
+// @version      0.1
+// @description  WX:taiga888888
+// @author       dada
+// @match        *://*/*
+// @grant        none
+// ==/UserScript==
+
+
+function modifyTicketNames() {
+    const nameWrapper = document.querySelector('.my-ticket-info__name');
+    if (!nameWrapper) return;
+
+    const children = Array.from(nameWrapper.childNodes);
+
+    const targetTextNode = children.find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '');
+
+    if (!targetTextNode) {
+        console.warn("找不到中间的名字文本");
+        return;
+    }
+
+    let rawName = targetTextNode.textContent.trim();
+    let parts = rawName.split(' ');
+    if (parts.length < 2) {
+        console.warn("名字无法按空格分割");
+        return;
+    }
+
+    const firstPart = parts[0];   
+    const secondPart = parts.slice(1).join(' ');  
+    targetTextNode.textContent = ' ' + firstPart + ' ';
+    const titleElements = document.querySelectorAll('.my-ticket-info__name-title');
+    if (titleElements.length >= 2) {
+        const secondTitle = titleElements[1];
+        let afterSecond = secondTitle.nextSibling;
+        if (!afterSecond || afterSecond.nodeType !== Node.TEXT_NODE) {
+            afterSecond = document.createTextNode('');
+            secondTitle.after(afterSecond);
+        }
+        afterSecond.textContent = secondPart;
+    }
+}
+
+modifyTicketNames();
