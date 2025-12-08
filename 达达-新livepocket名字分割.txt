@@ -8,6 +8,65 @@
 // ==/UserScript==
 
 
+
+
+
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function modifyTicketNames() {
     const nameWrapper = document.querySelector('.my-ticket-info__name');
     if (!nameWrapper) return;
@@ -44,3 +103,4 @@ function modifyTicketNames() {
 }
 
 modifyTicketNames();
+
