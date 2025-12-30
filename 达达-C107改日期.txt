@@ -1,0 +1,78 @@
+// ==UserScript==
+// @name         达达-新livepocket名字分割
+// @version      0.1
+// @description  WX:taiga888888
+// @author       dada
+// @match        *://*/*
+// @grant        none
+// ==/UserScript==
+
+
+
+
+
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+//  这里不要动！退出去！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const element = document.querySelector("body"); 
+if (element) {
+    element.innerHTML = element.innerHTML.replace(/【12\/30会場受取】/g, "【12/31会場受取】");
+}
+if (element) {
+    element.innerHTML = element.innerHTML.replace(/C107会場受取\(30日\)/g, "C107会場受取(31日)");
+}
+
+
