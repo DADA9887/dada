@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         达达-新livepocket名字分割
+// @name         达达-C107改日期
 // @version      0.1
 // @description  WX:taiga888888
 // @author       dada
@@ -74,5 +74,6 @@ if (element) {
 if (element) {
     element.innerHTML = element.innerHTML.replace(/C107会場受取\(30日\)/g, "C107会場受取(31日)");
 }
+
 
 
